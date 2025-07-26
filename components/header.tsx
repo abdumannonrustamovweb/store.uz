@@ -16,7 +16,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">🤠 Cowboy</div>
+            <div className="text-2xl font-bold text-primary">Cowboy</div>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6">
