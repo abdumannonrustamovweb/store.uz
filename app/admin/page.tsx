@@ -1,7 +1,5 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { useApp, type Product } from "../context/app-context"
 import { Button } from "@/components/ui/button"
@@ -21,6 +19,13 @@ import {
 } from "@/components/ui/dialog"
 
 export default function AdminPage() {
+  // Login holati
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [loginError, setLoginError] = useState("")
+
+  // Admin panel funksiyalari
   const { products, addProduct, updateProduct, deleteProduct } = useApp()
   const [isAddingProduct, setIsAddingProduct] = useState(false)
   const [editingProduct, setEditingProduct] = useState<Product | null>(null)
@@ -32,9 +37,20 @@ export default function AdminPage() {
     image: "",
   })
 
+  // ✅ Login tekshirish
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (username === "admin" && password === "12345") {
+      setIsLoggedIn(true)
+      setLoginError("")
+    } else {
+      setLoginError("Login yoki parol noto'g'ri!")
+    }
+  }
+
+  // ✅ Mahsulot form submit
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-
     if (!formData.name || !formData.description || !formData.price || !formData.image) {
       alert("Barcha maydonlarni to'ldiring!")
       return
@@ -85,6 +101,40 @@ export default function AdminPage() {
     }
   }
 
+  // ✅ Agar login bo'lmasa, login form chiqadi
+  if (!isLoggedIn) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            <CardTitle>Admin Panelga Kirish</CardTitle>
+            <CardDescription>Login va parolingizni kiriting</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleLogin} className="space-y-4">
+              <Input
+                placeholder="Login"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+              <Input
+                type="password"
+                placeholder="Parol"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              {loginError && <p className="text-red-500 text-sm">{loginError}</p>}
+              <Button type="submit" className="w-full">Kirish</Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    )
+  }
+
+  // ✅ Login bo'lsa, Admin Panel ko'rinadi
   return (
     <div className="container py-8">
       <div className="mb-8 flex items-center justify-between">

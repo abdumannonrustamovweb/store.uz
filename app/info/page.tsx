@@ -8,8 +8,8 @@ export default function InfoPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Cowboy haqida</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Cowboy - bu an'anaviy g'arb uslubidagi mahsulotlar do'koni. Biz eng yaxshi sifatli kovboy kiyimlari,
-              aksessuarlari va jihozlarini taklif etamiz. Bizning maqsadimiz - har bir mijozga haqiqiy kovboy ruhini his
+              Cowboy - bu an'anaviy g'arb uslubidagi mahsulotlar do'koni. Biz eng yaxshi sifatli cowboy kiyimlari,
+              aksessuarlari va jihozlarini taklif etamiz. Bizning maqsadimiz - har bir mijozga haqiqiy kowboy ruhini his
               qilish imkoniyatini berish.
             </p>
           </section>
@@ -36,19 +36,14 @@ export default function InfoPage() {
                 </p>
               </div>
 
-              <div className="p-6 border rounded-lg">
-                <h3 className="text-xl font-semibold mb-2">Qaytarish kafolati</h3>
-                <p className="text-muted-foreground">
-                  Agar mahsulot sizga yoqmasa, 30 kun ichida qaytarishingiz mumkin.
-                </p>
-              </div>
+             
             </div>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Bizning tariximiz</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              2020-yilda tashkil etilgan Cowboy do'koni bugungi kunga qadar minglab mijozlarga xizmat ko'rsatib
+              Cowboy do'koni bugungi kunga qadar minglab mijozlarga xizmat ko'rsatib
               kelmoqda. Biz an'anaviy kovboy madaniyatini zamonaviy uslub bilan uyg'unlashtirish orqali noyob
               mahsulotlar yaratamiz.
             </p>

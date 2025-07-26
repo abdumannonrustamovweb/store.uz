@@ -11,58 +11,7 @@ export default function HomePage() {
   // Demo mahsulotlarni qo'shish (faqat birinchi marta)
   useEffect(() => {
     if (products.length === 0) {
-      const demoProducts = [
-        {
-          name: "Cowboy Hat Classic",
-          description: "An'anaviy kovboy shlyapasi, yuqori sifatli materialdan tayyorlangan",
-          price: 89.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Western Boots",
-          description: "Haqiqiy teri kovboy etiklari, barcha ob-havo sharoitlari uchun",
-          price: 159.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Denim Jacket",
-          description: "Klassik kovboy uslubidagi denim kurtka",
-          price: 79.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Leather Belt",
-          description: "Kovboy uslubidagi teri kamar, metall tokali",
-          price: 45.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Bandana Red",
-          description: "Klassik qizil bandana, 100% paxta",
-          price: 12.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Cowboy Shirt",
-          description: "Kovboy uslubidagi ko'ylak, katak naqshli",
-          price: 55.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Spurs Silver",
-          description: "Kumush kovboy mahmuzlari, an'anaviy dizayn",
-          price: 34.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-        {
-          name: "Lasso Rope",
-          description: "Professional kovboy arqoni, yuqori sifatli",
-          price: 28.99,
-          image: "/placeholder.svg?height=400&width=400",
-        },
-      ]
-
-      demoProducts.forEach((product) => addProduct(product))
+    
     }
   }, [products.length, addProduct])
 

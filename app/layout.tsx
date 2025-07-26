@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Cowboy E-commerce",
-  description: "Cowboy online do'koni - eng yaxshi mahsulotlar",
-    generator: 'v0.dev'
+  description: "Cowboy online",
+    generator: 'v0'
 }
 
 export default function RootLayout({
